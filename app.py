@@ -6,13 +6,20 @@ app = Flask(__name__)
 
 @app.route('/reset', methods=['GET'])
 def reset():
-    df.iloc[0:0]
-    df.to_csv('data.csv', index=True)
-    return {
-        'code': 200,
-        'status': 'success',
-        'message': 'Data reset complete.'
-    }
+    try:
+        df.iloc[0:0]
+        df.to_csv('data.csv', index=True)
+        return {
+            'code': 200,
+            'status': 'success',
+            'message': 'Data reset complete.'
+        }
+    except:
+        return {
+            'code': 500,
+            'status': 'error',
+            'message': 'Error: Unable to reset data.'
+        }
 
 app.register_blueprint(task_controller)
 
