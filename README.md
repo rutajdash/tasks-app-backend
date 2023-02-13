@@ -4,7 +4,7 @@ This is a simple backend for a tasks app. It is built using Flask.
 
 ## Setup
 
-1. Install [Python 3](https://www.python.org/downloads/) and optionally [Anaconda](https://www.anaconda.com/products/individual)
+1. Install [Python 3.10](https://www.python.org/downloads/) and optionally [Anaconda](https://www.anaconda.com/products/individual)
 
 2. Clone the repository
 
